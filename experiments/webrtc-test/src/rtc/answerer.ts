@@ -32,7 +32,7 @@ export async function createAnswerer(
 	await pc.setLocalDescription(answer);
 
 	await waitForIceGathering(pc);
-	const sdp = pc.localDescription!.sdp!;
+	const sdp = pc.localDescription!.sdp;
 
 	// hold a promise for the data channel for once it's available from the offerer
 	pc.ondatachannel = (ev) => {

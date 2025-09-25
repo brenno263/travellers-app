@@ -25,3 +25,6 @@ dist-ssr
 
 # Automerge dev data storage
 *.automerge
+
+# Build cache manifest
+*.tsbuildinfo

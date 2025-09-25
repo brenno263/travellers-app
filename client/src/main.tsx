@@ -10,6 +10,7 @@ import {
 	WebSocketClientAdapter,
 } from "@automerge/react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import _adapter from "webrtc-adapter";
 import { createRootDocument, getStoredRootDocUrl } from "./rootDoc.ts";
 
@@ -35,11 +36,11 @@ document.location.hash = handle.url;
 const rootDocUrl = handle.url;
 
 createRoot(document.getElementById("root")!).render(
-	<RepoContext.Provider value={repo}>
+	<RepoContext value={repo}>
 		<StrictMode>
 			<Suspense fallback={<div>Loading...</div>}>
 				<App rootDocUrl={rootDocUrl} />
 			</Suspense>
 		</StrictMode>
-	</RepoContext.Provider>,
+	</RepoContext>,
 );

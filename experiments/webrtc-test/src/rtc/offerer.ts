@@ -29,7 +29,7 @@ export async function createOfferer(
 	});
 	await pc.setLocalDescription(offer);
 	await waitForIceGathering(pc);
-	const sdp = pc.localDescription!.sdp!;
+	const sdp = pc.localDescription!.sdp;
 	return {
 		pc: pc,
 		dc: dc,

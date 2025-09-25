@@ -79,6 +79,7 @@ export async function eventListenerCallbackToPromise<
 	timeout = 5000,
 ): Promise<R> {
 	return new Promise<R>((resolve, reject) => {
+		// eslint-disable-next-line prefer-const
 		let timeoutHandle!: ReturnType<typeof setTimeout>;
 		const internalCallback = (e: Event) => {
 			const res = callback(e);
@@ -89,7 +90,7 @@ export async function eventListenerCallbackToPromise<
 			}
 		};
 		timeoutHandle = setTimeout(
-			() => reject("Failed to resolve event: " + eventName),
+			() => reject(new Error("Failed to resolve event: " + eventName)),
 			timeout,
 		);
 		i.addEventListener(eventName, internalCallback);
@@ -101,5 +102,5 @@ export function encodeSignalBundle(sb: SignalBundle): string {
 }
 
 export function decodeSignalBundle(s: string): SignalBundle {
-	return JSON.parse(atob(s));
+	return JSON.parse(atob(s)) as SignalBundle;
 }

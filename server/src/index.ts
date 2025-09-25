@@ -1,6 +1,6 @@
 import express from "express";
 import { WebSocketServer } from "ws";
-import { PeerId, Repo } from "@automerge/automerge-repo";
+import { type PeerId, Repo } from "@automerge/automerge-repo";
 import { NodeWSServerAdapter } from "@automerge/automerge-repo-network-websocket";
 import { NodeFSStorageAdapter } from "@automerge/automerge-repo-storage-nodefs";
 import fs from "fs";
@@ -11,15 +11,17 @@ if (!fs.existsSync(datadir)) {
 	fs.mkdirSync(datadir);
 }
 
-var hostname = os.hostname();
+const hostname = os.hostname();
 
 const port = 3000;
 const globalSocket = new WebSocketServer({ noServer: true });
 const app = express();
 app.use(express.static("public"));
 
-const repo = new Repo({
-	// @ts-ignore The types don't align for the ws server and what automerge expects.
+// This initializes and listens on the websocket server.
+// We don't need to do anything else with it yet.
+new Repo({
+	// @ts-expect-error The types don't align for the ws server and what automerge expects.
 	// It works anyways!!!
 	network: [new NodeWSServerAdapter(globalSocket)],
 	storage: new NodeFSStorageAdapter(datadir),

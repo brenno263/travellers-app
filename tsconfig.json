@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.options.json",
+  "files": [],
+  "references": [
+    { "path": "client" },
+    { "path": "server" },
+    { "path": "common" },
+    { "path": "experiments/automerge-test" },
+    { "path": "experiments/automerge-test-server" },
+    { "path": "experiments/webrtc-test" }
+  ]
+}
