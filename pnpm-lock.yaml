@@ -60,6 +60,135 @@ importers:
         specifier: npm:rolldown-vite@7.1.12
         version: rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5)
 
+  experiments/automerge-test:
+    dependencies:
+      '@automerge/react':
+        specifier: ^2.3.1
+        version: 2.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react:
+        specifier: ^19.1.1
+        version: 19.1.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@19.1.1)
+      vite-plugin-wasm:
+        specifier: ^3.5.0
+        version: 3.5.0(rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5))
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.36.0
+        version: 9.36.0
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      '@vitejs/plugin-react':
+        specifier: ^5.0.3
+        version: 5.0.3(rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5))
+      eslint:
+        specifier: ^9.36.0
+        version: 9.36.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.36.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.20
+        version: 0.4.21(eslint@9.36.0)
+      globals:
+        specifier: ^16.4.0
+        version: 16.4.0
+      typescript:
+        specifier: ~5.8.3
+        version: 5.8.3
+      typescript-eslint:
+        specifier: ^8.44.0
+        version: 8.44.1(eslint@9.36.0)(typescript@5.8.3)
+      vite:
+        specifier: npm:rolldown-vite@7.1.12
+        version: rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5)
+
+  experiments/automerge-test-server:
+    dependencies:
+      '@automerge/automerge-repo':
+        specifier: ^2.3.1
+        version: 2.3.1
+      '@automerge/automerge-repo-network-websocket':
+        specifier: ^2.3.1
+        version: 2.3.1
+      '@automerge/automerge-repo-storage-nodefs':
+        specifier: ^2.3.1
+        version: 2.3.1
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
+      tsx:
+        specifier: ^4.20.5
+        version: 4.20.5
+      ws:
+        specifier: ^8.18.3
+        version: 8.18.3
+    devDependencies:
+      '@types/express':
+        specifier: ^5.0.3
+        version: 5.0.3
+      '@types/node':
+        specifier: ^24.5.2
+        version: 24.5.2
+      '@types/ws':
+        specifier: ^8.18.1
+        version: 8.18.1
+
+  experiments/webrtc-test:
+    dependencies:
+      react:
+        specifier: ^19.1.1
+        version: 19.1.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@19.1.1)
+      vite-plugin-wasm:
+        specifier: ^3.5.0
+        version: 3.5.0(rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5))
+      webrtc-adapter:
+        specifier: ^9.0.3
+        version: 9.0.3
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.36.0
+        version: 9.36.0
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      '@vitejs/plugin-react':
+        specifier: ^5.0.3
+        version: 5.0.3(rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5))
+      eslint:
+        specifier: ^9.36.0
+        version: 9.36.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.36.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.20
+        version: 0.4.21(eslint@9.36.0)
+      globals:
+        specifier: ^16.4.0
+        version: 16.4.0
+      typescript:
+        specifier: ~5.8.3
+        version: 5.8.3
+      typescript-eslint:
+        specifier: ^8.44.0
+        version: 8.44.1(eslint@9.36.0)(typescript@5.8.3)
+      vite:
+        specifier: npm:rolldown-vite@7.1.12
+        version: rolldown-vite@7.1.12(@types/node@24.5.2)(esbuild@0.25.10)(tsx@4.20.5)
+
   server:
     dependencies:
       '@automerge/automerge-repo':
