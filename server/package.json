@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pnpx tsx --watch src/index.ts",
+    "dev": "pnpx tsx --watch src/index.ts"
+  },
+  "keywords": [],
+  "author": "Brennan Seymour",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.0",
+  "dependencies": {
+    "@automerge/automerge-repo": "^2.3.1",
+    "@automerge/automerge-repo-network-websocket": "^2.3.1",
+    "@automerge/automerge-repo-storage-nodefs": "^2.3.1",
+    "express": "^5.1.0",
+    "tsx": "^4.20.5",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "@types/ws": "^8.18.1"
+  }
+}
